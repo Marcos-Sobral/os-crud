@@ -18,10 +18,33 @@
 #nav #nav-menu-li{
     list-style: none;
     color: #5CA720;
+    display: block;
+}
 
+#nav #nav-menu-li:hover{
+    cursor: pointer
 }
 
 #nav #nav-menu-ul{
     display: flex;
     gap: 3em;
 }
+
+#nav #nav-menu-li ul{
+    display: none;
+    padding: 0%;
+    position: absolute;
+    margin-top: 1rem;
+    flex-direction: column;
+    background-color: white;
+    gap: 2em;
+}
+
+#nav #nav-menu-li:hover ul{
+    display: flex;
+}
+
+#nav #nav-menu-li ul li{
+    display:block;
+    }
+

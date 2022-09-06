@@ -9,16 +9,28 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/footer.css'); }} " media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/responsive.css'); }} " media="screen" />
     <script src="https://kit.fontawesome.com/7d7b31a9bc.js" crossorigin="anonymous"></script>
-    <title>Selfcare - home</title>
+    <title>Minhas Malas - home</title>
 </head>
 <body>
     <header>
         <nav id="nav">
             <a href="" id="nav-title-icon"><i class="fa-solid fa-suitcase"></i>Minhas Malas</a>
             <ul id="nav-menu-ul">
-                <li id="nav-menu-li"><a href=""></a><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li id="nav-menu-li"><a href=""></a><i class="fa-solid fa-user"></i></li>
-                <li id="nav-menu-li"><a href=""></a><i class="fa-solid fa-cart-shopping"></i></li>
+                <li id="nav-menu-li">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li id="nav-menu-li">
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li id="nav-menu-li">
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <ul id="nav-menu-li">
+                        <li id="nav-menu-li"><a href=""><i class="fa-solid fa-plus"></i></a>
+                        <li id="nav-menu-li"><a href=""><i class="fa-solid fa-shop"></i></a>
+                        <li id="nav-menu-li"><a href=""><i class="fa-solid fa-gear"></i></a>
+                        <li id="nav-menu-li"><a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
