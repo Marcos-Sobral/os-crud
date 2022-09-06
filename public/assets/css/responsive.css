@@ -1,0 +1,18 @@
+@media screen and (max-width: 1000px){
+   
+    #grid-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    } 
+    
+    #img-main{
+        width: 127px;
+        height: 127px;
+        border-radius: 5px;
+    }
+    #nav #nav-title-icon{
+        padding: 4% 2%;
+    }
+}
