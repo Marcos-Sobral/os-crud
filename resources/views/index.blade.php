@@ -7,6 +7,11 @@
     <title>oi</title>
 </head>
 <body>
-    
+    <nav>
+        <a href=""></a>
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
 </body>
 </html>
