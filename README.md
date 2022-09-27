@@ -131,6 +131,175 @@ root /var/www/public/malas/teste/public;
 ```
 ***
 
+## Integração com Vue3 no inertia usando o breeze
+
+* instalar laravel breeze via composer:
+```
+composer require laravel/breeze --dev
+```
+* Em seguida, cole abaixo do comando:
+```
+php artisan breeze:install
+```
+* instalar breeze com vue 3
+```
+php artisan breeze:install vue
+```
+* instalações finais Dependências
+```
+npm install
+```
+```
+npm run dev
+```
+
+## Configurando o banco de dados(model e migrate)
+
+crie uma model e depois informe os dados do seu banco:
+```
+php artisan make:model produtos
+```
+
+crie uma migrate 
+```
+php artisan make:migration create_produtos_table
+```
+
+adicione os dados da model em sua migrate
+```
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('produtos', function (Blueprint $table) {
+            $table->id();
+            $table->String('NomeProduto');
+            $table->integer('QuantidadeProduto');
+            $table->float('PrecoProduto');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('produtos');
+    }
+};
+```
+
+atualize o banco de dados:
+```
+php artisan migrate:refresh
+```
+
+## Configurando Controller
+
+
+Crie uma Controller:
+```
+php artisan make:controller ProdutoController
+```
+
+adicione biblioteca Inertia e crie função index para retornar para [Home]
+
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+
+class ProdutoController extends Controller
+{
+    public function index()
+    {
+        return Inertia::render('Home',[
+            'name' => 'Marcos'
+        ]);
+    }
+
+}
+```
+
+## Configurando rotas:
+
+ Dentro de [Routes/web.php] informe sua rota e o controlador:
+```
+use App\Http\Controllers\ProdutoController;
+
+ Route::prefix('crud')->group(function(){
+    Route::get('/principal', [ProdutoController::class, 'index']);
+}); 
+```
+
+* Certifique se o arquivo app.blade.php localizado dentro de [resources/views/app.blade.php]. Caso não exista, crie dentro desse diretório um arquivo chamado "app.blade.php"
+
+- Dentro do arquivo [app.blade.php], cole: 
+```
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+        <script src="{{ mix('/js/app.js') }}" defer></script>
+        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+
+        <!-- Scripts -->
+        @routes
+        @vite('resources/js/app.js')
+        @inertiaHead
+    </head>
+    <body class="font-sans antialiased">
+    @section('content_header')
+        <h1>Principal</h1>
+    @stop
+        @inertia
+    </body>
+</html
+```
+
+## Configurando Vue3
+
+- localize o seguinte diretório dentro do projeto [resources/js/Pages], dentro de pages crie o arquivo "Home.vue" e nele cole:
+```
+<template>
+    <div class="container">
+        <h1>Olá {{name}}, seja bem vindo! estamos na vue</h1>
+    </div>
+</template>
+<script>
+export default {
+    props: {
+        name: String
+    }
+}
+</script>
+<style>
+</style>
+```
+
+***
 ## Lidando com possíveis erros
 ### Erro na porta 80:
 
