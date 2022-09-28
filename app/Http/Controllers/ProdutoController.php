@@ -18,21 +18,12 @@ class ProdutoController extends Controller
     }
 
     public function about()
-    {
-        $produtos = "blusa";
-        
-        return Inertia::render('About',[
-            'name' => $produtos
-        ]);
+    { 
+        return Inertia::render('About');
     }
 
-    public function register()
-    {
-        $produtos = "blusa";
-        
-        return Inertia::render('Register',[
-            'name' => $produtos
-        ]);
+    public function show()
+    { 
+        return Inertia::render('Ver');
     }
-
 }

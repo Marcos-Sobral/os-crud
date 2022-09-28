@@ -1,13 +1,22 @@
 <template>
     <header>
         <nav id="nav">
-            <Link href="" id="nav-title-icon"><i class="fa-solid fa-suitcase"></i>Minhas Malas</Link>
+            <Link href="/crud/principal" id="nav-title-icon"><img src="../../public/assets/img/Malas/logo/santamalas.png" alt="" class="img-logo"></Link>
             <ul id="nav-menu-ul">
                 <li id="nav-menu-li">
-                    <Link href="/crud/about">Sobre<i class="fa-solid fa-magnifying-glass"></i></Link>
+                    <Link href="">Como funciona ? |</Link>
                 </li>
                 <li id="nav-menu-li">
-                    <Link href="/crud/register">Criar<i class="fa-solid fa-cart-shopping"></i></Link>
+                    <Link href="/crud/principal/ver">Comprar |</Link>
+                </li>
+                <li id="nav-menu-li">
+                    <Link href="/crud/about">Sobre |</Link>
+                </li>
+                <li id="nav-menu-li">
+                    <Link href="/crud/register">Criar</Link>
+                </li>
+                <li id="nav-menu-li">
+                    <Link href=""><i class="fa-solid fa-bars"></i></Link>
                 </li>
             </ul>
         </nav>

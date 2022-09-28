@@ -1,20 +1,36 @@
 <template>
     <Layout>
-        <div class="container">
-            <form>
-                <input type="text" placeholder="Informe seu nome: " v-model="form.name">
-                <input type="email" placeholder="Informe seu email: " v-model="form.email">
-                <input type="password" placeholder="Informe sua senha: " v-model="form.password">
-                <button type="submit">Enviar</button>
-            </form>
+        <div v-for="(erro, index) in errors" :key="index" class="erro">
+            {{ erro }}
         </div>
+        <form @submit.prevent="handleForm">
+            <div class="grid-container">
+                <div>
+                    <input type="text" placeholder="Informe seu nome: " v-model="form.name"/>
+                </div>
+                <div>
+                    <input type="email" placeholder="Informe seu email: " v-model="form.email"/>
+                </div>
+                <div>
+                    <input type="password" placeholder="Informe sua senha: " v-model="form.password"/>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <button type="submit" class="button button:hover">Enviar</button>
+            </div>
+        </form>
     </Layout>
 </template>
 <script>
     import Layout from "../Layout.vue";
     export default {
+        
         components: { Layout },
-        props: {},
+        
+        props: {
+            errors: Object,
+        },
+
         data: () => {
             return {
                 form: {
@@ -26,7 +42,7 @@
         },
         methods: {
             handleForm() {
-                alert('O form foi enviado');
+                this.$inertia.post("/crud/register", this.form);
             }
         }
 
