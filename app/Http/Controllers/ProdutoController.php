@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class ProdutoController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return Inertia::render('Home',[
+            'name' => 'Marcos'
+        ]);
     }
 
 }
