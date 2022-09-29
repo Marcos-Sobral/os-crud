@@ -1,10 +1,11 @@
 @media screen and (max-width: 1000px){
    
-    #grid-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+
+    .grid-container-2{
+        grid-template-columns: repeat(1, 1fr);
     } 
     
     #img-main{
@@ -14,5 +15,13 @@
     }
     #nav #nav-title-icon{
         padding: 4% 2%;
+    }
+    .main-consulta{ 
+        padding: 4% 8% 1%;
+        margin: 8% 3%;
+        border-radius: 30px;
+        box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.07);
+        background: white;
+    
     }
 }

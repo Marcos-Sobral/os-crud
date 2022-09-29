@@ -15,7 +15,7 @@
               </div>
               <div class="grid-container-2">
                 <div>
-                  <label for="">Data de Partida: </label>
+                    <label for="">Data de Partida: </label>
                     <input type="email" placeholder="Ex: Retirar em:  " v-model="form.email"/>
                 </div>
                 <div>
@@ -26,9 +26,10 @@
               <div class="mt-5 text-center">
                 <label for="">** Programe a entrega 1 ou 2 dias antes da viagem. </label>
               </div>
-              
               <div class="text-center">
+                <a href="/crud/principal">
                   <button type="submit" class="button-main button-main:hover">Realizar busca</button>
+                </a>
               </div>
           </form>
           </div>

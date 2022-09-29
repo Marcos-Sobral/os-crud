@@ -5,7 +5,7 @@
       </div>
         
     </Layout>
-    <main>
+    <main class="main">
         <div class="title-menu">
             <h3>Itens</h3>
             <h3>9 Produtos</h3>
@@ -13,7 +13,7 @@
         <hr class="mt-10">
         <div class="grid-container">
             <div id="grid-item-main-4">
-                <img src="../../../public/assets/img/Malas/1.jpg" alt="" class="img-main">
+                <img src="../../../public/assets/img/Malas/2.jpg" alt="" class="img-main">
                 <div id="mt-20">
                     Mala de Viagem Média Cosmopolita Yins Brasil YS21160RO-M com Rodas Duplas Giro 360°
                     <p>R$<b class="title-preco-main">50,00</b></p>
@@ -77,7 +77,7 @@
         </div> 
         <div class="grid-container">
             <div id="grid-item-main-4">
-                <img src="../../../public/assets/img/Malas/7.jpg" alt="" class="img-main">
+                <img src="../../../public/assets/img/Malas/8.jpg" alt="" class="img-main">
                 <div id="mt-20">
                     Mala Viagem Pequena de Bordo Tonin Valentin Mountain 1205 - Azul Cobalto
                     <p>R$<b id="title-preco-main"> 50,00</b></p>

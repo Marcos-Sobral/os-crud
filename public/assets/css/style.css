@@ -3,15 +3,17 @@ body
     background: #F3F3F3;
 }
 
-main{ 
+.main{ 
     padding: 4%;
-    background-color: #F3F3F3;
+    margin: 2% 4%;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.07);
 }
 
 .main-consulta{ 
-    padding: 4% 23% 1%;
+    padding: 4% 8% 1%;
+    margin: 4% 19%;
     border-radius: 50px;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.07);
     background: white;
@@ -55,7 +57,6 @@ hr{
 
 .grid-container-2{
     display: grid;
-    text-align: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     margin-top: 20px;
