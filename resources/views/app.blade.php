@@ -7,8 +7,8 @@
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css'); }} " media="screen" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/header.css'); }} " media="screen" />
-        <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/normalizer.css'); }} " media="screen" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/footer.css'); }} " media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/table.css'); }} " media="screen" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/responsive.css'); }} " media="screen" />
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">

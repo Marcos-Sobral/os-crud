@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Register');
+        return Inertia::render('User/Register');
     }
 
     /**

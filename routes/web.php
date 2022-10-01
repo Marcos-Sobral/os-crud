@@ -15,12 +15,22 @@ Route::get('/', function () {
 });
 
 Route::prefix('crud')->group(function(){
-    Route::get('/principal', [ProdutoController::class, 'index'])->name('home');
-    Route::get('/about', [ProdutoController::class, 'about']);
-    Route::get('/principal/ver', [ProdutoController::class, 'show']);
+    Route::get('/principal', [ProdutoController::class, 'index'])->name('produto.home');
+    Route::get('/principal/ver', [ProdutoController::class, 'show'])->name('produto.show');
+    
+    Route::get('/criar', [ProdutoController::class, 'create'])->name('produto.create');
+    Route::post('/criar', [ProdutoController::class, 'store'])->name('produto.store');
+    
+    Route::get('/edit/{id}', [ProdutoController::class, 'edit'])->name('produto.edit');
+    Route::put('/edit/{id}', [ProdutoController::class, 'update'])->name('produto.update');
+    
+    Route::get('/about', [ProdutoController::class, 'about'])->name('produto.about');
+    Route::delete('/about/{id}', [ProdutoController::class, 'destroy'])->name('produto.destroy');
 
-    Route::get('/register', [UserController::class, 'index']);
-    Route::post('/register', [UserController::class, 'store']);
+    Route::get('/sobre', [ProdutoController::class, 'sobre'])->name('produto.sobre');
+
+    Route::get('/register', [UserController::class, 'index'])->name('user.index');
+    Route::post('/register', [UserController::class, 'store'])->name('produto.store');
 }); 
 
 Route::get('/dashboard', function () {
