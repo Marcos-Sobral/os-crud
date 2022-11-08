@@ -8,3 +8,7 @@
 .table-tbody{
     text-align: center;
 }
+
+.tr{
+    border-top: 1px solid;
+}

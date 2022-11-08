@@ -7,20 +7,30 @@
 
 Minhas malas é um sistema de controle de estoque e reserva de malas web que utiliza o framework PHP Laravel. O Minhas malas permite o administrado criar e gerenciar seus produtos sem muito contato com os clientes. Dessa maneira, o cliente entra no site e reserva sua mala, assim o sistema notifica o administrado que houve uma reserva e informando os dados do cliente como: nome, cpf, data de nascimento, sexo, endereço, telefone. Portanto, o administrador passaria tais dados para o entregador que localizaria o cliente e efetua o recebimento do pagamento manualmente.
 
-## clonagem do projeto
+### Sumário 
+* [Instalação de recursos para o ambiente](#ambiente)
+* [Clonagem do projeto com ambiente pronto](#instalação-e-configuração-do-projeto)
+* [Instalação do vue3](#integração-com-vue3-no-inertia-usando-o-breeze)
+* [Configurando rotas](#configurando-rotas)
+* [Configurando controller](#configurando-controller)
+* [Configurando banco de dados](#configurando-o-banco-de-dadosmodel-e-migrate)
+* [Lidando com possíveis erros](#lidando-com-possíveis-erros)
+
+
+# Ambiente
 
 *obs: As instruções de instalação estão disponíveis para ambos sistemas: Windows e Linux.* 
 
 **Para realizar clonagem de um projeto LARAVEL existente do github/gitlab para o UBUNTU serão necessários:**
 
-* git
-* Composer 2 ou superior
+* [git](https://git-scm.com/downloads)
+* [Composer 2](https://getcomposer.org/download/) ou superior
 * PHP da versão do projeto ou superior
-* Extensões do PHP
-* Docker Engine
-* IDE para códificação como VSCode (OPCIONAL)
+* [Extensões do PHP](#instalação-do-php-junto-de-extensões)
+* [Docker Engine](https://code.visualstudio.com/download)
+* IDE para códificação como [VSCode](https://code.visualstudio.com/download) (OPCIONAL)
 * Docker Desktop
-* Laradock
+* [Laradock](https://www.youtube.com/watch?v=GMxcUO1GhKU&list=PLbjGpiBmGKl3W4Pc9haW-XJo-mRMv74N_&index=2&t=779s)
 
 # Instalação git:
 Abra um terminal e utilize o seguinte comando:

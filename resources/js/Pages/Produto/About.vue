@@ -4,30 +4,33 @@
     <main class="main">
             <table class="table">
                 <thead>
-                        <th>#</th>
-                        <th>Nome</th>
-                        <th>Quantidade</th>
-                        <th>Preço</th>
-                        <th colspan="3">Ações</th>
+                  <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th colspan="3">Ações</th>
+                  </tr>
                 </thead>
                 <tbody class="table-tbody" v-for="produtos in produto" :key="produtos.id">
-                        <td>{{ produtos.id }}</td>
-                        <td>{{ produtos.NomeProduto }}</td>
-                        <td>{{ produtos.QuantidadeProduto }}</td>
-                        <td>{{ produtos.PrecoProduto }}</td>
-                        <td>
-                            <Link  @click="edit(produtos.id)">
-                                <button class="button-main button-main:hover">Editar</button> 
-                            </Link>
-                            |
-                            <Link @click="destroy(produtos.id)">
-                              <button type="button" class="button-main button-main:hover">Deletar</button> 
-                            </Link>
-                            |
-                            <Link @click="create()">
-                                <button class="button-main button-main:hover">Criar</button> 
-                            </Link>
-                        </td>
+                  <tr class="tr">
+                    <td>{{ produtos.id }}</td>
+                    <td>{{ produtos.NomeProduto }}</td>
+                    <td>{{ produtos.QuantidadeProduto }}</td>
+                    <td>{{ produtos.PrecoProduto }}</td>
+                    <td>
+                        <Link  @click="edit(produtos.id)">
+                          <Btn value="Editar"/> 
+                        </Link>
+                        <Link @click="destroy(produtos.id)">
+                          <Btn class="ml-5 mr-5" value="Deletar"/> 
+                        </Link>
+                        <Link @click="create()">
+                            <Btn value="Criar"/> 
+                        </Link>
+                    </td>
+                  </tr>
+
                 </tbody>
             </table>
     </main>
@@ -38,12 +41,14 @@
 import Layout from "../../Layout.vue";
 import {  Link, Head  } from '@inertiajs/inertia-vue3';
 import { Inertia } from "@inertiajs/inertia";
+import Btn from "@/Components/Btn.vue";
 export default {
   components: {
     Layout,
     Link,
     Head,
-  },
+    Btn
+},
   props: {
     produto: Object,
   },
